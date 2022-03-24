@@ -26,7 +26,7 @@ final as (
         orders.order_id,
         orders.customer_id,
         orders.order_date,
-        coalesce(orders_payment.amount,0) as amount
+        coalesce(order_payment.amount,0) as amount
     from orders
     left join order_payment using (order_id)
 )
