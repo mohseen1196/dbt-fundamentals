@@ -10,7 +10,7 @@ orders as (
 
     select
     *
-    from {{ ref('stg_orders') }}
+    from {{ ref('fct_orders') }}
 
 ),
 
